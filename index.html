@@ -413,6 +413,37 @@
             height: 100%;
             object-fit: cover; /* This maintains aspect ratio while filling container */
         }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        #vanta-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 0 20px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            z-index: 1;
+            margin: 0 auto;
+        }
+
+        .hero h1, .hero .lead {
+            color: white;
+        }
         
         /* Responsive styles */
         @media (max-width: 992px) {
@@ -477,6 +508,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div id="vanta-background"></div>
         <div class="container">
             <div class="hero-content">
                 <h1>Hello, I'm <span style="color: #0066cc;">Mayuresh Joshi</span></h1>
@@ -771,5 +803,32 @@
             });
         });
     </script> -->
+    <script>
+        VANTA.BIRDS({
+            el: "#vanta-background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0x23153c,
+            color1: 0x3b95d3,
+            color2: 0xff9500,
+            colorMode: "variance",
+            birdSize: 1.50,
+            wingSpan: 16.00,
+            speedLimit: 4.00,
+            separation: 75.00,
+            alignment: 1.00,
+            cohesion: 1.00
+        })
+    </script>
+    <!-- THREE.js is required for most Vanta effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<!-- Include the specific Vanta effect you want (BIRDS in this example) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.birds.min.js"></script>
 </body>
 </html>
