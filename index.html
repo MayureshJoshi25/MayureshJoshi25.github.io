@@ -515,9 +515,6 @@
                 <p class="lead">Recent Carnegie Mellon University graduate in Information Security with specialization in Cloud, offensive security and DFIR.</p>
                 <a href="#contact" class="btn">Get In Touch</a>
             </div>
-            <div class="hero-image">
-                <img src="/api/placeholder/400/400" alt="Profile Image">
-            </div>
         </div>
     </section>
 
@@ -804,31 +801,23 @@
         });
     </script> -->
     <script>
-        VANTA.BIRDS({
-            el: "#vanta-background",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            backgroundColor: 0x23153c,
-            color1: 0x3b95d3,
-            color2: 0xff9500,
-            colorMode: "variance",
-            birdSize: 1.50,
-            wingSpan: 16.00,
-            speedLimit: 4.00,
-            separation: 75.00,
-            alignment: 1.00,
-            cohesion: 1.00
+        VANTA.FOG({
+          el: "#your-element-selector",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          highlightColor: 0xe3ff,
+          midtoneColor: 0xffffff,
+          lowlightColor: 0x7d55e3,
+          baseColor: 0xffffff
         })
     </script>
     <!-- THREE.js is required for most Vanta effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
 <!-- Include the specific Vanta effect you want (BIRDS in this example) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.birds.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.fog.min.js"></script>
 </body>
 </html>
