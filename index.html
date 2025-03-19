@@ -573,7 +573,7 @@
             let index = 0;
 
             // Add a blinking cursor effect
-            typewriterElement.style.borderRight = "2px solid black";
+            typewriterElement.style.borderRight = "1px solid black"; // Smaller cursor
             typewriterElement.style.paddingRight = "5px";
             typewriterElement.style.animation = "blink-cursor 0.7s step-end infinite";
 
@@ -595,7 +595,8 @@
             `;
             document.head.appendChild(style);
 
-            type();
+            // Start typing after a delay of 3 seconds
+            setTimeout(type, 3000);
         });
     </script>
     <!-- Hero Section -->
