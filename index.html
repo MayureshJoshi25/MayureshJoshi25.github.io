@@ -52,9 +52,13 @@
         }
         
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: rgb(28, 83, 235);
+        }
+        
+        .logo span {
+            color: var(--primary-light);
         }
         
         .nav-links {
@@ -556,7 +560,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo" id="typewriter"></div>
+                <a href="#" class="logo">Mayuresh<span>Joshi</span></a>
                 <div class="nav-links">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
@@ -566,39 +570,6 @@
             </nav>
         </div>
     </header>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const text = "MJ";
-            const typewriterElement = document.getElementById('typewriter');
-            let index = 0;
-
-            // Add a blinking cursor effect
-            typewriterElement.style.borderRight = "1px solid black"; // Smaller cursor
-            typewriterElement.style.paddingRight = "5px";
-            typewriterElement.style.animation = "blink-cursor 0.7s step-end infinite";
-
-            function type() {
-                if (index < text.length) {
-                    typewriterElement.textContent += text.charAt(index);
-                    index++;
-                    setTimeout(type, 200); // Adjust typing speed here
-                }
-            }
-
-            // Add CSS for blinking cursor
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes blink-cursor {
-                    from { border-right-color: black; }
-                    to { border-right-color: transparent; }
-                }
-            `;
-            document.head.appendChild(style);
-
-            // Start typing after a delay of 3 seconds
-            setTimeout(type, 3000);
-        });
-    </script>
     <!-- Hero Section -->
     <section class="hero" id="home" style="position: relative; overflow: hidden;">
         <div id="vanta-background"></div>
